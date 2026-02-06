@@ -1,0 +1,13 @@
+{
+  "auto-pairs": { "branch": "master", "commit": "39f06b873a8449af8ff6a3eee716d3da14d63a76" },
+  "camelcasemotion": { "branch": "master", "commit": "e69b0024f8f63db10c5d0df26d4920760755d454" },
+  "coc.nvim": { "branch": "release", "commit": "235b688f6b4b18c4cecb36aeceeb71d8d5bcac6f" },
+  "emmet-vim": { "branch": "master", "commit": "e98397144982d1e75b20d94d55a82de3ec8f648d" },
+  "fzf-lua": { "branch": "main", "commit": "c86b72c62b01d2242cafa45fb0d1fc3bf66e6a2b" },
+  "lazy.nvim": { "branch": "main", "commit": "85c7ff3711b730b4030d03144f6db6375044ae82" },
+  "nvim-web-devicons": { "branch": "master", "commit": "746ffbb17975ebd6c40142362eee1b0249969c5c" },
+  "vim-airline": { "branch": "master", "commit": "b03fdc542f5155b54959102a2aecaf6c792dce01" },
+  "vim-commentary": { "branch": "master", "commit": "64a654ef4a20db1727938338310209b6a63f60c9" },
+  "vim-css-color": { "branch": "master", "commit": "14fd934cdd9ca1ac0e53511094e612eb9bace373" },
+  "vim-go": { "branch": "master", "commit": "a5a612535a92d68a4282d1c8dde901275c0c1260" }
+}
