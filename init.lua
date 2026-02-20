@@ -18,5 +18,7 @@ vim.keymap.set({"n", "v", "o"}, "e", "<Plug>CamelCaseMotion_e")
 vim.keymap.set('n', 'ff', '<cmd>FzfLua files<CR>', { desc = 'Find files' })
 
 vim.lsp.enable("gopls")
+vim.lsp.enable("zls")
+vim.lsp.inlay_hint.enable(true)
 
 require("config.lazy")
