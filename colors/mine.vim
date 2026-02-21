@@ -102,6 +102,12 @@ hi DiffChange guifg=#ffffff guibg=#5f87af gui=NONE cterm=NONE
 hi DiffText guifg=#000000 guibg=#c6c6c6 gui=NONE cterm=NONE
 hi DiffDelete guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
 
+"hi LspReferenceText guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
+"hi LspReferenceText guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
+"hi LspReferenceText guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
+hi LspInlayHint guifg=#ffffff guibg=#3d3d3d gui=NONE cterm=NONE
+hi LspSignatureActiveParameter guifg=#ffffff guibg=#3d3d3d gui=NONE cterm=NONE
+"
 if s:t_Co >= 256
   hi! link Terminal Normal
   hi! link LineNrAbove LineNr

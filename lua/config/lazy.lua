@@ -23,26 +23,12 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-	{
-    "fatih/vim-go",
-    build = ":GoUpdateBinaries",
-    ft = { "go" }
-  },
 
   -- CamelCase motion
   { "bkad/camelcasemotion" },
 
   -- Airline statusline
   { "vim-airline/vim-airline" },
-
-  -- Commentary
-  -- { "tpope/vim-commentary" },
-
-  -- Emmet
-  { "mattn/emmet-vim" },
-
-  -- CSS color preview
-  { "ap/vim-css-color" },
 
   -- Auto pairs
   { "jiangmiao/auto-pairs" },
@@ -62,10 +48,20 @@ require("lazy").setup({
 	},
 
 	{
+		"neovim/nvim-lspconfig",
+	},
+
+	{
 		'saghen/blink.cmp',
+		-- optional: provides snippets for the snippet source
+		dependencies = { 'rafamadriz/friendly-snippets' },
 
 		-- use a release tag to download pre-built binaries
 		version = '1.*',
+		-- AND/OR build from source, requires nightly: https://rust-lang.github.io/rustup/concepts/channels.html#working-with-nightly-rust
+		-- build = 'cargo build --release',
+		-- If you use nix, you can build from source using latest nightly rust with:
+		-- build = 'nix run .#build-plugin',
 
 		---@module 'blink.cmp'
 		---@type blink.cmp.Config
@@ -108,6 +104,7 @@ require("lazy").setup({
 		},
 		opts_extend = { "sources.default" }
 	},
+
 
   -- spec = {
   --   -- import your plugins
