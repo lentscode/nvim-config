@@ -22,7 +22,7 @@ vim.cmd.colorscheme("mine")
 -- File operations
 vim.keymap.set('n', 'ff', '<cmd>FzfLua files<CR>', { desc = 'Find files' })
 
-vim.lsp.enable({ "gopls", "zls", "lua_ls" })
+vim.lsp.enable({ "gopls", "zls", "lua_ls", "clangd" })
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 	on_attach = function(client, bufnr)
