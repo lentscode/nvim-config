@@ -59,7 +59,7 @@ hi CursorLine guifg=NONE guibg=#333333 gui=NONE cterm=NONE
 hi CursorColumn guifg=NONE guibg=#333333 gui=NONE cterm=NONE
 hi ColorColumn guifg=NONE guibg=#000000 gui=NONE cterm=NONE
 hi CursorLineNr guifg=NONE guibg=#333333 gui=NONE cterm=NONE
-hi Visual guifg=#d7d787 guibg=#5f8700 gui=NONE cterm=NONE
+hi Visual guifg=#ffffff guibg=#7510c7 gui=NONE cterm=NONE
 hi SignColumn guifg=NONE guibg=#262626 gui=NONE cterm=NONE
 hi VisualNOS guifg=#d7d787 guibg=#5f8700 gui=NONE cterm=NONE
 hi LineNr guifg=#666666 guibg=NONE gui=NONE cterm=NONE

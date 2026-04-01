@@ -48,10 +48,6 @@ require("lazy").setup({
 	},
 
 	{
-		"neovim/nvim-lspconfig",
-	},
-
-	{
 		'saghen/blink.cmp',
 		-- optional: provides snippets for the snippet source
 		dependencies = { 'rafamadriz/friendly-snippets' },
@@ -103,6 +99,25 @@ require("lazy").setup({
 			fuzzy = { implementation = "prefer_rust_with_warning" }
 		},
 		opts_extend = { "sources.default" }
+	},
+	{
+		'nvim-java/nvim-java',
+		config = function()
+			require('java').setup()
+			vim.lsp.enable('jdtls')
+		end,
+	},
+	{
+    "mason-org/mason.nvim",
+    opts = {}
+	},
+	{
+    "mason-org/mason-lspconfig.nvim",
+    opts = {},
+    dependencies = {
+        { "mason-org/mason.nvim", opts = {} },
+        "neovim/nvim-lspconfig",
+    },
 	},
 
 
