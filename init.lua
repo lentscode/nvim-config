@@ -35,3 +35,4 @@ vim.lsp.config("*", {
 -- vim.lsp.inlay_hint.enable(true)
 
 require("config.lazy")
+require("config.angular")
