@@ -101,6 +101,8 @@ hi DiffAdd guifg=#ffffff guibg=#5f875f gui=NONE cterm=NONE
 hi DiffChange guifg=#ffffff guibg=#5f87af gui=NONE cterm=NONE
 hi DiffText guifg=#000000 guibg=#c6c6c6 gui=NONE cterm=NONE
 hi DiffDelete guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
+hi NormalFloat guifg=#ffffff guibg=#262626 gui=NONE cterm=NONE
+hi FloatBorder guifg=#ffffff guibg=#7510c7 gui=NONE cterm=NONE
 
 "hi LspReferenceText guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
 "hi LspReferenceText guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE

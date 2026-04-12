@@ -32,6 +32,6 @@ vim.lsp.config("*", {
 		})
 	end,
 })
-vim.lsp.inlay_hint.enable(true)
+-- vim.lsp.inlay_hint.enable(true)
 
 require("config.lazy")
