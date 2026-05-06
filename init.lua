@@ -22,8 +22,6 @@ vim.cmd.colorscheme("mine")
 -- File operations
 vim.keymap.set('n', 'ff', '<cmd>FzfLua files<CR>', { desc = 'Find files' })
 
-vim.keymap.set('n', 't', '<cmd>NvimTreeOpen<CR>')
-
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 	on_attach = function(client, bufnr)
