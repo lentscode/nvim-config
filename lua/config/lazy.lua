@@ -31,7 +31,11 @@ require("lazy").setup({
   { "vim-airline/vim-airline" },
 
   -- Auto pairs
-  { "jiangmiao/auto-pairs" },
+  { "jiangmiao/auto-pairs",
+    init = function()
+      vim.g.AutoPairsShortcutToggle = ''
+    end
+  },
 
   -- FZF
 	{
@@ -99,13 +103,6 @@ require("lazy").setup({
 			fuzzy = { implementation = "prefer_rust_with_warning" }
 		},
 		opts_extend = { "sources.default" }
-	},
-	{
-		'nvim-java/nvim-java',
-		config = function()
-			require('java').setup()
-			vim.lsp.enable('jdtls')
-		end,
 	},
 	{
     "mason-org/mason.nvim",

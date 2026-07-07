@@ -1,6 +1,9 @@
 -- Impostazioni base
 vim.g.mapleader = " "
 
+-- Eliminate ESC delay
+vim.o.ttimeoutlen = 0
+
 -- Opzioni
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
@@ -20,7 +23,8 @@ vim.cmd.colorscheme("mine")
 -- vim.keymap.set({"n", "v", "o"}, "e", "<Plug>CamelCaseMotion_e")
 
 -- File operations
-vim.keymap.set('n', 'ff', '<cmd>FzfLua files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', 'ff', '<cmd>FzfLua git_files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', 'fj', '<cmd>FzfLua jj_files<CR>', { desc = 'Find files (jj)' })
 
 vim.lsp.config("*", {
 	root_markers = { ".git" },
