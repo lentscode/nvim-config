@@ -34,6 +34,14 @@ require("lazy").setup({
   { "jiangmiao/auto-pairs",
     init = function()
       vim.g.AutoPairsShortcutToggle = ''
+
+      -- Typst uses dollar signs to delimit math expressions.
+      vim.api.nvim_create_autocmd("FileType", {
+        pattern = "typst",
+        callback = function()
+          vim.b.AutoPairs = vim.fn.AutoPairsDefine({ ["$"] = "$" })
+        end,
+      })
     end
   },
 
