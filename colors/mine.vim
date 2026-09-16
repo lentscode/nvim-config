@@ -81,7 +81,7 @@ hi SpellBad guifg=#ff0000 guibg=NONE guisp=#ff0000 gui=undercurl cterm=underline
 hi SpellCap guifg=#ffff00 guibg=NONE guisp=#ffff00 gui=undercurl cterm=underline
 hi SpellLocal guifg=#ffafaf guibg=NONE guisp=#ffafaf gui=undercurl cterm=underline
 hi SpellRare guifg=#ffd7af guibg=NONE guisp=#ffd7af gui=undercurl cterm=underline
-hi Comment guifg=#666666 guibg=NONE gui=NONE cterm=NONE
+hi Comment guifg=#888888 guibg=NONE gui=NONE cterm=NONE
 hi String guifg=#87d7ff guibg=NONE gui=NONE cterm=NONE
 hi Identifier guifg=#ff8787 guibg=NONE gui=NONE cterm=NONE
 hi Function guifg=#ffd7af guibg=NONE gui=NONE cterm=NONE
@@ -109,6 +109,8 @@ hi FloatBorder guifg=#ffffff guibg=#7510c7 gui=NONE cterm=NONE
 "hi LspReferenceText guifg=#ffffff guibg=#af5faf gui=NONE cterm=NONE
 hi LspInlayHint guifg=#ffffff guibg=#3d3d3d gui=NONE cterm=NONE
 hi LspSignatureActiveParameter guifg=#ffffff guibg=#3d3d3d gui=NONE cterm=NONE
+hi TreesitterContext guifg=#ffffff guibg=#303030 gui=NONE cterm=NONE
+
 "
 if s:t_Co >= 256
   hi! link Terminal Normal

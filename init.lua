@@ -7,7 +7,6 @@ vim.o.ttimeoutlen = 0
 -- Opzioni
 vim.o.tabstop = 2
 vim.o.shiftwidth = 2
-vim.o.ignorecase = true
 vim.o.winborder = "rounded"
 vim.o.relativenumber = true
 vim.o.smarttab = true
@@ -23,7 +22,8 @@ vim.cmd.colorscheme("mine")
 -- vim.keymap.set({"n", "v", "o"}, "e", "<Plug>CamelCaseMotion_e")
 
 -- File operations
-vim.keymap.set('n', 'ff', '<cmd>FzfLua git_files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', 'ff', '<cmd>FzfLua files<CR>', { desc = 'Find files' })
+vim.keymap.set('n', 'fg', '<cmd>FzfLua git_files<CR>', { desc = 'Find files (git)' })
 vim.keymap.set('n', 'fj', '<cmd>FzfLua jj_files<CR>', { desc = 'Find files (jj)' })
 
 vim.lsp.config("*", {
@@ -36,10 +36,35 @@ vim.lsp.config("*", {
 		})
 	end,
 })
--- vim.lsp.inlay_hint.enable(true)
+vim.lsp.inlay_hint.enable(true)
+vim.lsp.config("gopls", {
+  settings = {
+    gopls = {
+      semanticTokens = true,
+    },
+		hints = {
+			assignVariableTypes = true,
+			compositeLiteralFields = true,
+			compositeLiteralTypes = true,
+			constantValues = true,
+			functionTypeParameters = true,
+			parameterNames = true,
+			rangeVariableTypes = true,
+		},
+  },
+})
+
+vim.filetype.add {
+	pattern = {
+		["openapi.*%.ya?ml"] = "yaml.openapi",
+	},
+}
 
 vim.api.nvim_set_keymap("n", "gD", "<cmd>lua vim.lsp.buf.declaration()<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "gd", "<cmd>lua vim.lsp.buf.definition()<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "cq", "<cmd>cclose<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "cn", "<cmd>cnext<CR>", { noremap = true, silent = true })
+vim.api.nvim_set_keymap("n", "cp", "<cmd>cprev<CR>", { noremap = true, silent = true })
 
 require("config.lazy")
 require("config.angular")
