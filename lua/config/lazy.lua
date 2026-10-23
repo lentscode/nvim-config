@@ -23,7 +23,6 @@ vim.g.maplocalleader = "\\"
 
 -- Setup lazy.nvim
 require("lazy").setup({
-  { import = "plugins.notebooks" },
 
   -- CamelCase motion
   { "bkad/camelcasemotion" },
@@ -137,13 +136,7 @@ require("lazy").setup({
     -- dependencies = { 'nvim-treesitter/nvim-treesitter', 'nvim-tree/nvim-web-devicons' }, -- if you prefer nvim-web-devicons
     ---@module 'render-markdown'
     ---@type render.md.UserConfig
-    opts = {
-      -- Jupytext gives notebooks the Markdown filetype; use their filename to
-      -- keep cell fences visible without changing ordinary Markdown rendering.
-      ignore = function(buf)
-        return vim.api.nvim_buf_get_name(buf):match("%.ipynb$") ~= nil
-      end,
-    },
+    opts = {},
 	},
 	{
 		'nvim-treesitter/nvim-treesitter-context',
