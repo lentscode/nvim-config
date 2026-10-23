@@ -75,5 +75,7 @@ vim.api.nvim_set_keymap("n", "cq", "<cmd>cclose<CR>", { noremap = true, silent =
 vim.api.nvim_set_keymap("n", "cn", "<cmd>cnext<CR>", { noremap = true, silent = true })
 vim.api.nvim_set_keymap("n", "cp", "<cmd>cprev<CR>", { noremap = true, silent = true })
 
+-- Select the Python remote-plugin host before lazy.nvim loads Molten.
+require("config.notebooks").setup()
 require("config.lazy")
 require("config.angular")
