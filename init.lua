@@ -53,10 +53,19 @@ vim.lsp.config("gopls", {
 		},
   },
 })
+vim.lsp.config("tinymist", {
+	settings = {
+		projectResolution = "lockDatabase",
+		exportPdf = "onSave",
+	},
+})
 
 vim.filetype.add {
 	pattern = {
 		["openapi.*%.ya?ml"] = "yaml.openapi",
+	},
+	extension = {
+		mdx = "mdx"
 	},
 }
 
