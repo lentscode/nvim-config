@@ -26,6 +26,12 @@ vim.keymap.set('n', 'ff', '<cmd>FzfLua files<CR>', { desc = 'Find files' })
 vim.keymap.set('n', 'fg', '<cmd>FzfLua git_files<CR>', { desc = 'Find files (git)' })
 vim.keymap.set('n', 'fj', '<cmd>FzfLua jj_files<CR>', { desc = 'Find files (jj)' })
 
+-- Terminals: open a split and immediately send typing to the shell.
+vim.keymap.set('n', 'th', '<cmd>belowright split | terminal<CR>i', { desc = 'Terminal below' })
+vim.keymap.set('n', 'tv', '<cmd>belowright vsplit | terminal<CR>i', { desc = 'Terminal to the right' })
+-- Only terminal buffers use Esc this way; i resumes terminal input.
+vim.keymap.set('t', '<Esc>', '<C-\\><C-n>', { desc = 'Leave terminal input mode' })
+
 vim.lsp.config("*", {
 	root_markers = { ".git" },
 	on_attach = function(client, bufnr)
