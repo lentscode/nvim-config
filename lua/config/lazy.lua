@@ -139,6 +139,16 @@ require("lazy").setup({
     opts = {},
 	},
 	{
+		"folke/snacks.nvim",
+		opts = {
+			image = {
+				enabled = true,
+				-- Keep this setup focused on images.
+				math = { enabled = false },
+			},
+		},
+	},
+	{
 		'nvim-treesitter/nvim-treesitter-context',
 	},
 	{
